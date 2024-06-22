@@ -1,0 +1,163 @@
+/* CSS Variables */
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --color-primary: #db6363;
+    --color-secondary: #2f2f2f;
+    --color-bg: #f0f0f0;
+    --color-white: #ffffff;
+    --font-size-large: 2em;
+    --font-size-medium: 1.5em;
+    --font-size-small: 1em;
+  }
+  
+  /* Universal Styles */
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    text-align: center;
+    margin: 0;
+    font-family: var(--font-family);
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-rows: 100px auto auto auto auto 80px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Header */
+  header {
+    grid-column: 1 / -1;
+    display: grid;
+    place-items: center;
+  }
+  
+  .title {
+    color: var(--color-primary);
+    font-size: var(--font-size-large);
+    font-weight: 700;
+  }
+  
+  /* Banner */
+  .banner {
+    padding: 3%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: var(--font-size-large);
+    font-weight: 300;
+    letter-spacing: 3.7px;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner-contents {
+    max-width: 80%;
+  }
+  
+  .dog {
+    height: 5em;
+    margin-left: 20px;
+  }
+  
+  /* About */
+  .about {
+    background-color: var(--color-bg);
+    grid-column: 1 / -1;
+    display: grid;
+    place-items: center;
+  }
+  
+  .text {
+    color: var(--color-secondary);
+    font-size: var(--font-size-medium);
+    font-weight: 700;
+  }
+  
+  /* Info Boxes */
+  .box {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+  }
+  
+  .address {
+    grid-column: 1 / span 2;
+  }
+  
+  .hours {
+    grid-column: 3 / span 2;
+  }
+  
+  .call-us {
+    grid-column: 5 / span 2;
+  }
+  
+  .icon {
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  /* Testimonials */
+  .testimonial {
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    font-size: var(--font-size-small);
+    font-style: italic;
+    letter-spacing: 3.7px;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+  }
+  
+  .one {
+    grid-column: 1 / span 3;
+  }
+  
+  .two {
+    grid-column: 4 / span 3;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: var(--font-size-small);
+    grid-column: 1 / -1;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  
+    .title, .banner, .about, .box, .testimonial, footer {
+      grid-column: 1 / -1;
+    }
+  
+    .dog {
+      margin: 10px 0 0 0;
+    }
+  
+    .address, .hours, .call-us {
+      grid-column: 1 / -1;
+    }
+  
+    .one, .two {
+      grid-column: 1 / -1;
+    }
+  }
+  
